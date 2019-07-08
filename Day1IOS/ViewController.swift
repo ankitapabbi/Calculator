@@ -50,14 +50,11 @@ class ViewController: UIViewController {
         self.lblResult.text = String(num1! + num2!)
 //        self.theResult = self.lblResult.text!
 //        performSegue(withIdentifier: "add", sender: self)
-                let sb = UIStoryboard(name: "Main", bundle: nil)
-                let result = sb.instantiateViewController(withIdentifier: "result") as! ResultViewController
-                //result.lblMainResult.text! = self.lblResult.text!
-        
-                result.actualResult = self.lblResult.text
-                //print(result.actualResult)
-        
-                self.navigationController?.pushViewController(result,animated: true)
+          let sb = UIStoryboard(name: "Main", bundle: nil)
+          let result = sb.instantiateViewController(withIdentifier: "result") as! ResultViewController
+          result.actualResult = self.lblResult.text
+          //print(result.actualResult)
+          self.navigationController?.pushViewController(result,animated: true)
         
         
         
